@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+body {
+  padding: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.card {
+  width: 18rem;
+  box-shadow: 1px 2px 5px #aaa;
+  border-radius: 10% !important;
+  padding: 20px;
+}
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* 상단 파란 박스 스타일 */
+.button {
+  margin-top: 50px;
+  display: inline-block;
+  padding: 5px 35px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-image: linear-gradient(135deg, #e0f3fa 0%, #d8f0fc 35%, #b8e2f6 58%, #b6dffd 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #b4d6eb;
+  transition: background-image 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+
+.button:hover {
+  background-image: linear-gradient(135deg, #e4f5fc 0%, #bfe8f9 36%, #9fd8ef 66%, #2ab0ed 100%);
+}
+
+.button:active {
+  background-image: linear-gradient(135deg, #e4f5fc 0%, #bfe8f9 36%, #9fd8ef 66%, #2ab0ed 100%);
+  box-shadow: 0 5px #9ebfd3;
+  transform: translateY(4px);
+}
+
+.btn-close {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.btn-close:hover {
+  transform: rotate(135deg);
+}
+
+.box_img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 2px 4px 20px rgba(161, 161, 161, 0.2901960784);
+}
+
+.box {
+  position: relative;
+  max-width: 450px;
+  border: 2px solid #3498db;
+  background-color: #f7fdff;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 6px 10px #d9e4ec;
+  border-radius: 10px;
+}
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before, .ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid #2980b9;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 700 18px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ribbon-top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+
+.ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
+}
+
+#message {
+  display: block;
+  position: absolute;
+  top: 270px;
+  left: 30px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 9px 6px;
+  box-shadow: 2px 3px 4px #a9a9a9;
+}
+#message::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: -5px;
+  border-top: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c4e7fc;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+}
+
+.section01 {
+  height: 1000px;
+}
+
+.img_background {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  background: url("../images/bg_01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+}
+.img_background .ib_01 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  /* 부드러운 애니메이션 추가 */
+}
+.img_background .ib_01_1 {
+  left: 0;
+}
+.img_background .ib_01_2 {
+  right: 0;
+}
+
+body {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/****** Style Star Rating Widget *****/
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+
+.box_wrap {
+  display: flex;
+}
+
+.star_box {
+  margin: 20px 0 0 20px;
+}
+.star_box p {
+  margin-top: 100px;
+  width: 350px;
+  text-align: justify;
+  text-indent: 20px;
+}
+.star_box label {
+  display: flex;
+}
+.star_box label a#goPage {
+  margin: 0 10px;
+  width: 60px;
+  height: 40px;
+  transition: 0.2s;
+  border: none;
+  background-color: #e4f5fc;
+  border-radius: 5px;
+  box-shadow: 2px 4px 4px #d9d9d9;
+  border: 1px solid #3498db;
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+}
+.star_box label a#goPage:hover {
+  background-color: #9fd8ef;
+  border: 3px solid #3498db;
+  color: #fff;
+  font-weight: 900;
+}
+
+.rating {
+  border: none;
+  float: left;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  color: #ddd;
+  float: right;
+}
+.rating label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rating .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+#score_box {
+  font-weight: 900;
+  position: absolute;
+  top: 364px;
+  right: 170px;
+  font-size: 25px;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+} /* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+.section2 {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 50px 0;
+}
+#contact h3 {
+  color: #F96;
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+}
+#contact input[type=text], #contact input[type=email], #contact textarea {
+  width: 100%;
+  border: 1px solid #CCC;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  outline: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .box_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .box, .star_box p {
+    width: 100%;
+    max-width: 100%;
+  }
+}
